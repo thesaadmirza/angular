@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SuccessAlertComponent  implements OnInit{
   allowNewAlerts = false;
   alertCreationStatus = "there is no server created";
+  alertlabel = "";
   constructor()
   {
     setTimeout(() => {
@@ -21,5 +22,9 @@ export class SuccessAlertComponent  implements OnInit{
   onCreateServer()
   {
     this.alertCreationStatus = 'alert got created';
+  }
+  onUpdateAlert(event:any)
+  {
+    this.alertlabel = event.target.value;
   }
 }

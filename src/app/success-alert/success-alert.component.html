@@ -1,5 +1,7 @@
 <p>success-alert works!</p>
-
+<label>Alert Name</label>
+<input type="text" class="form-control" [(ngModel)]="alertlabel" >
+<h4>{{ alertlabel }}</h4>
 <button class="btn btn-primary" [disabled]="!allowNewAlerts" (click)="onCreateServer()">
     Add More Alerts
 </button>

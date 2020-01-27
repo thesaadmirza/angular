@@ -10,3 +10,20 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <hr>
+      <h3>Assignment</h3>
+      <label>Username </label>
+      <input type="text" [(ngModel)]="username" (input)="checkUsername($event)"> 
+      <p>{{ username}}</p>
+      <button class="btn btn-info" [disabled]="!disableStatus" (click)="clearString()">
+        RESET 
+      </button>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>

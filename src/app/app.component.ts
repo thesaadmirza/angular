@@ -11,4 +11,23 @@ import { Component } from '@angular/core';
   `]
 })
 export class AppComponent {
+  username = "";
+  disableStatus = false;
+  checkUsername(event)
+  {
+ 
+    if(event.target.value)
+    {
+      this.username = event.target.value;
+      this.disableStatus = true;
+    }else{
+      this.disableStatus = false;
+    }
+    
+  }
+  clearString()
+  {
+    this.disableStatus=false;
+    this.username = "";
+  }
 }
